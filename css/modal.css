@@ -1,0 +1,181 @@
+.modal {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+}
+
+.modal-container {
+  background-color: #fff;
+  padding: 3rem;
+  max-width: 650px;
+  max-height: 95%;
+  width: 80%;
+  border-radius: 0.4rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 480px) {
+  .modal-container {
+    max-height: 90vh;
+    max-width: 300px;
+  }
+}
+
+.modal-content {
+  margin: 0 auto;
+
+  line-height: 1.5;
+  color: #0d3144;
+}
+
+.modal-content img {
+  max-width: 600px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.modal-content p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 480px){
+    .modal-content p {
+        font-size: 1.3rem;
+        margin: 1rem 0;
+      }
+}
+
+.modal-btn {
+  font-size: 1.7rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #e6e6e6;
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.25rem;
+  border-style: none;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-appearance: button;
+  text-transform: none;
+  overflow: visible;
+  line-height: 1.15;
+  margin: 0;
+  will-change: transform;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.modal-btn:focus,
+.modal-btn:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.modal-btn-primary {
+  background-color: #0d3144;
+  color: #fff;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .modal-footer {
+    display: flex;
+    justify-content: end;
+    text-align: center;
+  }
+}
+
+/**************************\
+  Animation Style
+  \**************************/
+@keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes mmslideIn {
+  from {
+    transform: translateY(15%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mmslideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10%);
+  }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal-overlay {
+  animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal-container {
+  animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal-overlay {
+  animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal-container {
+  animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide .modal-container,
+.micromodal-slide .modal-overlay {
+  will-change: transform;
+}

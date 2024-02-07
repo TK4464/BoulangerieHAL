@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Boulangerie HAL</title>
+    <link rel="icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="./css/ress.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <!-- Bodoni font -->
+    <link rel="stylesheet" href="https://use.typekit.net/jaz6ljz.css">
+
+    <link rel="stylesheet" href="https://use.typekit.net/vci5yiz.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pax0uml.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <header>
+            <!-- 960px以下の時にハンバーガーメニュー -->
+            <!-- ハンバーガーメニュー開閉ボタン -->
+            <div class="hamburger-menu-btn" id="js-hamburger">
+                <span class="hamburger-menu-ber hamburger-menu-ber1"></span>
+                <span class="hamburger-menu-ber hamburger-menu-ber2"></span>
+                <span class="hamburger-menu-ber hamburger-menu-ber3"></span>
+            </div>
+            <!-- ハンバーガーメニュー -->
+            <div class="hamburger-menu">
+                <div><a href="#content1" class="hamburger-menu-item">Home</a></div>
+                <div><a href="#content2" class="hamburger-menu-item">News</a></div>
+                <div><a href="#content3" class="hamburger-menu-item">Menu</a></div>
+                <div><a href="#content4" class="hamburger-menu-item">Address</a></div>
+            </div>
+        </header>
+
+        <!-- メインビジュアル -->
+        <div class="background swiper" id="content1">
+            <div class="background-image swiper-wrapper overlay">
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img src="./images/hero-image1.jpg" alt="hero-image1" />
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img src="./images/hero-image2.jpg" alt="hero-image2" />
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img src="./images/hero-image3.jpg" alt="hero-image3" />
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-img">
+                        <img src="./images/hero-image4.jpg" alt="hero-image4" />
+                    </div>
+                </div>
+            </div>
+            <div class="main-logo">
+                <img src="./images/main-logo.svg" alt="main-logo">
+            </div>
+            <!-- スクロールダウン -->
+            <div class="arrowWrap">
+                <a href="#content2">
+                    <div class="arrowInner">
+                        <p>SCROLL DOWN</p>
+                        <div class="arrow"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- SNSアイコン -->
+        <div class="sns-icon">
+            <ul>
+                <li><a href="#" target="_blank"><img src="./images/x-icon.svg" alt="x-icon"></a></li>
+                <li><a href="#" target="_blank"><img src="./images/facebook-icon.svg" alt="facebook-icon"></a></li>
+                <li><a href="#" target="_blank"><img src="./images/instagram-icon.svg" alt="instagram-icon"></a></li>
+            </ul>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <article class="main-wrapper">
+            <section class="news-wrapper" id="content2">
+                <div class="news-title-section">
+                    <div class="section-number">1/3</div>
+                    <div class="news-title">News<p>お知らせ</p>
+                    </div>
+                </div>
+
+                <div class="news-content">
+                    <div class="news-text-wrapper">
+                        <ul>
+                            <li data-micromodal-trigger="modal-1" role="button">
+                                <div class="news-ymd">2023-11-30</div>
+                                <div class="news-text">
+                                    名産ブルーチーズ「フルム・ダンベール」を使ったパンや郷土料理をアレンジした惣菜パンなど、フェア限定商品をご用意しております。
+                                </div>
+
+                            </li>
+                            <li data-micromodal-trigger="modal-2" role="button">
+                                <div class="news-ymd">2023-11-16</div>
+                                <div class="news-text">
+                                    ご好評いただいております、デザートに、季節限定でオレンジを使用したデザートが加わります。
+                                </div>
+
+                            </li>
+                            <li data-micromodal-trigger="modal-3" role="button">
+                                <div class="news-ymd">2023-11-08</div>
+                                <div class="news-text">
+                                    フランス　オーベルニュ地方の伝統パンや郷土料理の惣菜パンなどを販売するオーベルニュ地方フェアを開催いたします。
+                                </div>
+
+                            </li>
+                            <div class="button">
+                                <a href="#">
+                                    <button class="cta">
+                                        <span class="hover-underline-animation"> View All</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- モーダルエリア -->
+            <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+                <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+                    <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+
+                        <main class="modal-content" id="modal-1-content">
+                            <img src="./images/news-image1.jpg" alt="news-image1">
+                            <p>
+                                名産ブルーチーズ「フルム・ダンベール」を使ったパンや郷土料理をアレンジした惣菜パンなど、フェア限定商品をご用意しております。
+                            </p>
+                            <footer class="modal-footer">
+                                <button class="modal-btn modal-btn-primary" data-micromodal-close
+                                    aria-label="Close this dialog window">
+                                    閉じる
+                                </button>
+                            </footer>
+                        </main>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
+                <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+                    <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+                        <main class="modal-content" id="modal-2-content">
+                            <img src="./images/news-image2.jpg" alt="news-image2">
+                            <p>
+                                ご好評いただいております、デザートに、季節限定でオレンジを使用したデザートが加わります。
+                            </p>
+                        </main>
+                        <footer class="modal-footer">
+                            <button class="modal-btn modal-btn-primary" data-micromodal-close
+                                aria-label="Close this dialog window">
+                                閉じる
+                            </button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <div class="modal micromodal-slide" id="modal-3" aria-hidden="true">
+                <div class="modal-overlay" tabindex="-1" data-micromodal-close>
+                    <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+                        <main class="modal-content" id="modal-3-content">
+                            <img src="./images/news-image3.jpg" alt="news-image3">
+                            <p>
+                                フランス　オーベルニュ地方の伝統パンや郷土料理の惣菜パンなどを販売するオーベルニュ地方フェアを開催いたします。
+                            </p>
+                        </main>
+                        <footer class="modal-footer">
+                            <button class="modal-btn modal-btn-primary" data-micromodal-close
+                                aria-label="Close this dialog window">
+                                閉じる
+                            </button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <section class="bg-photo">
+                <ul>
+                    <li class="text is-active">一口かじると、そこに広がるのは特別な幸福感。</li>
+                    <li class="text">素材のおいしさが広がる、心に残る本格派パンの楽園。</li>
+                    <li class="text">一口でわかる、本物のパンの美味しさ。</li>
+                </ul>
+            </section>
+
+            <section class="menu" id="content3">
+                <div class="menu-wrapper">
+
+                    <div class="menu-title-section">
+                        <div class="section-number2">2/3</div>
+                        <div class="menu-title">Menu<p>メニュー</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-grid">
+                        <div class="post-module">
+                            <!-- サムネイル -->
+                            <div class="thumbnail">
+                                <img src="./images/pain001.jpg" />
+                            </div>
+
+                            <div class="post-content">
+                                <h1 class="title">フワス　ヴェルヴェンヌ　<br>　</h1>
+                                <h2 class="sub-title">more info -</h2>
+                                <p class="description">オーベルニュ地方の名産ハーブ「ヴェルヴェンヌ」にオレンジ、レモンを合わせ　香り高いブリオッシュに仕上げています。</p>
+                            </div>
+                        </div>
+                        <div class="post-module">
+                            <!-- サムネイル -->
+                            <div class="thumbnail">
+                                <img src="./images/pain002.jpg" />
+                            </div>
+                            <div class="post-content">
+                                <h1 class="title">ローストビーフとフルムダンベールチーズのサンドイッチ</h1>
+                                <h2 class="sub-title">more info -</h2>
+                                <p class="description">
+                                    名産フルムダンベールチーズを使った濃厚でクリーミーなソースにローストビーフを合わせたサンドイッチです。林檎を添えて爽やかに仕上げています。</p>
+                            </div>
+                        </div>
+
+                        <div class="post-module">
+                            <!-- サムネイル -->
+                            <div class="thumbnail">
+                                <img src="./images/pain003.jpg" />
+                            </div>
+                            <div class="post-content">
+                                <h1 class="title">ソーセージとレンズ豆のタルティーヌ</h1>
+                                <h2 class="sub-title">more info -</h2>
+                                <p class="description">レンズ豆と相性の良い、ソーセージとマッシュポテトをのせたボリューム満点のタルティーヌです。</p>
+                            </div>
+                        </div>
+                        <div class="post-module">
+                            <!-- サムネイル -->
+                            <div class="thumbnail">
+                                <img src="./images/pain004.jpg" />
+                            </div>
+                            <div class="post-content">
+                                <h1 class="title">塩豚とルピュイ産レンズ豆煮込みのパイ</h1>
+                                <h2 class="sub-title">more info -</h2>
+                                <p class="description">
+                                    オーベルニュ地方ルピュイ名産のレンズ豆を塩豚・ベーコン・香味野菜と煮込む郷土料理のパイです。塩豚の旨みを吸収したレンズ豆をパイで包んで焼き上げています。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="post-module">
+                            <!-- サムネイル -->
+                            <div class="thumbnail">
+                                <img src="./images/pain005.jpg" />
+                            </div>
+                            <div class="post-content">
+                                <h1 class="title">ケークサレ<br>　</h1>
+                                <h2 class="sub-title">more info -</h2>
+                                <p class="description">昔からある郷土料理です。スイスチャード（葉野菜)を生地に練り込みベーコンとプルーンを加えた甘塩っぱいケークサレです。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="post-module">
+                            <!-- サムネイル -->
+                            <div class="thumbnail">
+                                <img src="./images/pain006.jpg" />
+                            </div>
+                            <div class="post-content">
+                                <h1 class="title">郷土料理「トリュファード」のクロワッサン</h1>
+                                <h2 class="sub-title">more info -</h2>
+                                <p class="description">
+                                    ジャガイモ、玉ねぎ、スモークベーコンを名産トムフレッシュチーズと炒める郷土料理「トリュファード」をクロワッサン生地に合わせて香ばしく仕上げています。
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- menu-grid -->
+
+                    <div class="button button2">
+                        <a href="#">
+                            <button class="cta">
+                                <span class="hover-underline-animation"> View All</span>
+                                <!-- <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10"
+                                    viewBox="0 0 46 16">
+                                    <path id="Path_10" data-name="Path 10"
+                                        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                                        transform="translate(30)"></path>
+                                </svg> -->
+                            </button>
+                        </a>
+                    </div> <!--button -->
+                </div><!-- menu-wrapper -->
+            </section><!-- menu -->
+
+            <section class="address" id="content4">
+                <div class="address-wrapper">
+                    <div class="address-title-section">
+                        <div class="section-number3">3/3</div>
+                        <div class="address-title">Address<p>アドレス</p>
+                        </div>
+                    </div>
+                    <div class="address-article">
+                        <div class="iframe-wrapper">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.1945910223976!2d139.69865337634656!3d35.647577072598175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b4f619a78df%3A0x6fc613cfe835cbd0!2z44CSMTUwLTAwMzMg5p2x5Lqs6YO95riL6LC35Yy654y_5qW955S677yS77yZ4oiS77yR77yYIOODkuODq-OCteOCpOODieODhuODqeOCuQ!5e0!3m2!1sja!2sjp!4v1705589282080!5m2!1sja!2sjp"
+                                style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <ul>
+                            <li>
+                                <h2>Boulangerie HAL</h2>
+                            </li>
+                            <li>
+                                <p>住所：東京都渋谷区猿楽町29-18</p>
+                            </li>
+                            <li>
+                                <p>電話：03-3344-1010</p>
+                            </li>
+                            <li>
+                                <p>東急東横線［代官山駅］下車　徒歩3分<br>東急東横線・地下鉄日比谷線［中目黒駅］下車　徒歩7分<br>JR山手線・JR埼京線・地下鉄日比谷線［恵比寿駅］下車　徒歩10分
+                                </p>
+                            </li>
+                            <li>
+                                <p>営業時間<br>10:00～20:00</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-photo2">
+                <a href="#" class="bg-photo-link1">取扱店舗はこちら</a>
+                <a href="#" class="bg-photo-link2">オンラインストア</a>
+            </section>
+
+        </article>
+
+
+        <!-- フッター -->
+        <footer class="footer">
+            <ul>
+                <li><a href="#content1" data-hover-text="ホーム" class="switch__content">Home</a></li>
+                <li><a href="#content2" data-hover-text="ニュース" class="switch__content">News</a></li>
+                <li><a href="#content3" data-hover-text="メニュー" class="switch__content">Menu</a></li>
+                <li><a href="#content4" data-hover-text="アドレス" class="switch__content">Address</a></li>
+            </ul>
+            <div>
+                <p><span>&copy;2024 Boulangerie HAL All Rights Reserved.</span></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <!-- adobe-font A-OTF -->
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'fte3kru',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+
+    <!-- ハンバーガーメニュー -->
+    <script src="./js/index.js"></script>
+    <script src="./js/hover.js"></script>
+    <script src="./js/textChange.js"></script>
+
+    <!-- microModal -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="./js/modal.js"></script>
+
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+
+</body>
+
+</html>
